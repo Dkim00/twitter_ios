@@ -14,6 +14,7 @@ class HomeTableViewController: UITableViewController {
     var tweetArray = [NSDictionary]()
     var numberOfTweet: Int!
     
+    let myRefreshControl = UIRefreshControl()
 
     @IBAction func onLogout(_ sender: Any) {
         TwitterAPICaller.client?.logout()
@@ -26,7 +27,14 @@ class HomeTableViewController: UITableViewController {
         
         loadTweet()
         
+        myRefreshControl.addTarget(self, action: #selector(loadTweet), for: .valueChanged) // used to call loadtweet to refresh when pulling down
+        tableView.refreshControl = myRefreshControl
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadTweet() //refreshes tweets everytime you get back to home screen
     }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,7 +43,7 @@ class HomeTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     
     
-    func loadTweet(){
+    @objc func loadTweet(){
         
         let myURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
         let myParams = ["count": 20] //sets parameters for api call
@@ -48,6 +56,8 @@ class HomeTableViewController: UITableViewController {
             }
             
             self.tableView.reloadData()
+            self.myRefreshControl.endRefreshing() //removes the wheel after refreshing
+            
             
         }, failure: { (Error) in
             print("could not retrieve tweet")
@@ -69,6 +79,9 @@ class HomeTableViewController: UITableViewController {
         if let imageData = data {
             cell.profileImageView.image = UIImage(data: imageData)
         }
+        cell.setFavorited(tweetArray[indexPath.row]["favorited"] as! Bool)
+        cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
+        cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         
         return cell
     }

@@ -16,8 +16,7 @@
 		8469060F28E11E29008E1786 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469060E28E11E29008E1786 /* LoginViewController.swift */; };
 		8469061128E159F9008E1786 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469061028E159F9008E1786 /* HomeTableViewController.swift */; };
 		8469061328E2693A008E1786 /* TweetCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469061228E2693A008E1786 /* TweetCellTableViewCell.swift */; };
-		8469061528E2A8E3008E1786 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8469061428E2A8E3008E1786 /* README.md */; };
-		8469061728E2A905008E1786 /* Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8469061628E2A905008E1786 /* Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif */; };
+		8469061928EA349E008E1786 /* TweetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8469061828EA349E008E1786 /* TweetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +31,7 @@
 		8469060E28E11E29008E1786 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8469061028E159F9008E1786 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		8469061228E2693A008E1786 /* TweetCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetCellTableViewCell.swift; sourceTree = "<group>"; };
-		8469061428E2A8E3008E1786 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		8469061628E2A905008E1786 /* Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif"; path = "../../../Desktop/Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif"; sourceTree = "<group>"; };
+		8469061828EA349E008E1786 /* TweetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetViewController.swift; sourceTree = "<group>"; };
 		872C2D82F41D5A5D2A920E9E /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2D685C92646819A9A0DC30C /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,8 +87,7 @@
 				8469060E28E11E29008E1786 /* LoginViewController.swift */,
 				8469061028E159F9008E1786 /* HomeTableViewController.swift */,
 				8469061228E2693A008E1786 /* TweetCellTableViewCell.swift */,
-				8469061628E2A905008E1786 /* Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif */,
-				8469061428E2A8E3008E1786 /* README.md */,
+				8469061828EA349E008E1786 /* TweetViewController.swift */,
 			);
 			path = Twitter;
 			sourceTree = "<group>";
@@ -164,10 +161,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8469061728E2A905008E1786 /* Simulator Screen Recording - iPhone 14 Pro - 2022-09-26 at 20.42.22.gif in Resources */,
 				6EBCF54E21E71F9400451C03 /* Launch Screen.storyboard in Resources */,
 				37D29B8621F90E3400984A88 /* Assets.xcassets in Resources */,
-				8469061528E2A8E3008E1786 /* README.md in Resources */,
 				6EBCF52B21DF07FC00451C03 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,6 +214,7 @@
 			files = (
 				8469061128E159F9008E1786 /* HomeTableViewController.swift in Sources */,
 				8469060F28E11E29008E1786 /* LoginViewController.swift in Sources */,
+				8469061928EA349E008E1786 /* TweetViewController.swift in Sources */,
 				6EBCF54421E047A500451C03 /* TwitterAPICaller.swift in Sources */,
 				8469061328E2693A008E1786 /* TweetCellTableViewCell.swift in Sources */,
 				6EBCF52621DF07FC00451C03 /* AppDelegate.swift in Sources */,
